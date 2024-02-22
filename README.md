@@ -1,5 +1,5 @@
-# tkinter-studies
-Studies on tkinter usages in Python
+# tkinter-projects
+Projects with tkinter in Python
 
 Here you will find, inside the FrontEnd class, some other useful classes to use:
 
