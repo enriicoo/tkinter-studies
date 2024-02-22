@@ -262,16 +262,22 @@ class FrontEnd:
                 messagebox.showerror("Error", "Please enter valid numbers.")
                 return
         elif self.file_path:
+            if not self.file_path.lower().endswith('.txt'):
+                messagebox.showerror("Error", "Please provide a valid .txt file path.")
+                return
             try:
                 with open(self.file_path, 'r') as file:
                     numbers_string = file.read()
-                numbers_list = [int(num.strip()) for num in numbers_string.split(',')]
+                numbers_list = [int(num.strip()) for num in numbers_string.split(',') if num.strip().isdigit()]
                 self.stuffclass.numbers = numbers_list
             except ValueError:
                 messagebox.showerror("Error", "The file contains invalid numbers.")
                 return
             except FileNotFoundError:
                 messagebox.showerror("Error", "The file was not found.")
+                return
+            except Exception as e:
+                messagebox.showerror("Error", str(e))
                 return
         self.running = True
         self.process_thread = threading.Thread(target=self.stuffclass.run)
