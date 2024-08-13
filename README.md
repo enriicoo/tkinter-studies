@@ -1,7 +1,7 @@
 # tkinter-projects
 Projects with tkinter in Python
 
-Here you will find, inside the FrontEnd class, some other useful classes to use:
+Here you will find, inside the FrontEnd class, allocated in tkinter_basic_application.py, some other useful classes to use:
 
 - class RootElement: defines if app is resizable and size of program.
 - class BasicElement: most basic element you need. Superclass to others.
