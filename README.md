@@ -14,3 +14,5 @@ Here you will find, inside the FrontEnd class, some other useful classes to use:
 The two methods inside the class use the threading module to update dynamic information.
 
 Adapt everything as you need!
+
+![screenshot](https://github.com/enriicoo/tkinter-projects/blob/main/tkinter_basic_application.png)
